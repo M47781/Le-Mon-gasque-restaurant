@@ -1,0 +1,208 @@
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Le Monégasque - Restaurant Alger</title>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+        <style>
+            *{margin:0;padding:0;box-sizing:border-box}
+
+            body{
+                font-family:'Poppins',sans-serif;
+                min-height:100vh;
+                overflow-x:hidden;
+                background: linear-gradient(135deg, #0f0f0f 0%, #2a2a2a 100%);
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                padding:20px;
+            }
+
+            .container{
+                width:100%;
+                max-width:480px;
+                background: rgba(18, 18, 18, 0.98);
+                border: 1px solid rgba(255, 215, 0, 0.3);
+                border-radius:40px;
+                padding:45px 25px;
+                text-align:center;
+                box-shadow: 0 25px 50px rgba(0,0,0,0.8);
+            }
+
+            .logo{
+                width:140px;
+                height:140px;
+                object-fit:contain;
+                margin-bottom: 20px;
+                filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.2));
+            }
+
+            h1{
+                font-family:'Playfair Display', serif;
+                font-size:28px;
+                color:#ffffff;
+                letter-spacing:2px;
+                margin-bottom: 5px;
+            }
+
+            .subtitle {
+                color: #ffd700;
+                font-size: 12px;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                margin-bottom: 25px;
+                font-weight: 700;
+            }
+
+            .bio{ 
+                color:#d1d1d1; 
+                font-size:14px; 
+                margin-bottom:30px; 
+                line-height:1.6;
+                background: rgba(255,255,255,0.05);
+                padding: 15px;
+                border-radius: 15px;
+            }
+
+            .btn{
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                gap:15px;
+                margin:14px 0;
+                padding:18px 25px;
+                border-radius:15px;
+                text-decoration:none;
+                font-size:14px;
+                font-weight:600;
+                color:white;
+                background: #1e1e1e;
+                border: 1px solid rgba(255,255,255,0.1);
+                transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                position: relative;
+                overflow: hidden; /* Important pour le shimmer */
+            }
+
+            .btn:hover{
+                background:#ffffff;
+                color:#000;
+                transform: translateY(-3px);
+            }
+
+            /* ✨ EFFET SHIMMER (REFLET) */
+            .btn-gold {
+                background: linear-gradient(45deg, #ffd700, #b8860b);
+                color: #000;
+                border: none;
+            }
+
+            .btn-gold::after {
+                content: "";
+                position: absolute;
+                top: -50%;
+                left: -100%;
+                width: 50%;
+                height: 200%;
+                background: rgba(255, 255, 255, 0.4);
+                transform: rotate(30deg);
+                transition: none;
+                animation: shimmer 3s infinite;
+            }
+
+            @keyframes shimmer {
+                0% { left: -100%; }
+                30% { left: 150%; } /* Le reflet passe vite au début du cycle */
+                100% { left: 150%; } /* Pause avant le prochain passage */
+            }
+
+            .btn img{ width:22px; position: relative; z-index: 1; }
+            .btn span { position: relative; z-index: 1; }
+
+            /* 📍 Section MAP */
+            .map-section {
+                margin-top: 25px;
+                text-align: left;
+            }
+            .map-title {
+                color: #ffd700;
+                font-size: 11px;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+                letter-spacing: 2px;
+                text-align: center;
+            }
+            .map-container {
+                width: 100%;
+                height: 200px;
+                border-radius: 20px;
+                overflow: hidden;
+                border: 1px solid #ffd700;
+            }
+            .map-container iframe {
+                width: 100%;
+                height: 100%;
+                border: 0;
+            }
+
+            .footer{
+                margin-top:40px;
+                font-size:11px;
+                color:#666;
+                letter-spacing: 1px;
+            }
+        </style>
+    </head>
+    <body>
+
+    <div class="container">
+        <img src="https://res.cloudinary.com/dv664dogt/image/upload/v1771885030/photo_5830139971287846296_x_1_lgdxov.png" class="logo">
+        
+        <h1>LE MONÉGASQUE</h1>
+        <div class="subtitle">Restaurant & Brunch</div>
+        
+        <p class="bio">
+            🍳 <b>BRUNCH</b> : 9h - 12h (7j/7)<br>
+            🌙 <b>DÎNER</b> : Ouvert jusqu'à 00h<br>
+            📍 Ain Allah, Alger
+        </p>
+
+        <a class="btn btn-gold" href="https://lemonegasque.my.canva.site/menu-mogasque-final-site-web?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnkzct4RN2Edt9VNCNPeBRJ7M-K7C-pywHZaz3bqhuItQEH5uhFJcSUMCFAtw_aem_zGUj648-Ae2foIf88uxWkw" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/128/2252/2252438.png">
+            <span>CONSULTER LE MENU</span>
+        </a>
+
+        <a class="btn" href="tel:0557867503">
+            <img src="https://cdn-icons-png.flaticon.com/128/724/724664.png">
+            <span>Appeler & Réserver</span>
+        </a>
+
+        <a class="btn" href="https://www.instagram.com/lemonegasquedz" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png">
+            <span>Instagram</span>
+        </a>
+
+        <a class="btn" href="https://www.tiktok.com/@restaurantmonegasque" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/128/3046/3046121.png">
+            <span>TikTok</span>
+        </a>
+
+        <a class="btn" href="https://www.facebook.com/share/1AoF1Y3b8T/" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/128/733/733547.png">
+            <span>Facebook</span>
+        </a>
+
+        <div class="map-section">
+            <p class="map-title">📍 Nous trouver</p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.243542387161!2d2.9774619!3d36.7526938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDQ1JDA5LjciTiAywrA1OCczOC45IkU!5e0!3m2!1sfr!2sdz!4v1710000000000" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <div class="footer">© 2026 LE MONÉGASQUE ALGER</div>
+    </div>
+
+    </body>
+    </html> 
